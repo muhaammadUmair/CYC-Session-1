@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Design</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div>
+      <span>👤 Login</span>
+      <ul>
+        <li>Home</li>
+        <li>News</li>
+        <li>Products</li>
+      </ul>
+    </div>
+    <div>
+      <input type="text" placeholder="Search">
+      <button>Search</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Frontend Web Page Design</h1>
+    <p>This is a sample web page.</p>
+    <button>View Now</button>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features">
+    <h2>Basic HTML, CSS, JavaScript <small>— Tools Used</small></h2>
+    <div class="box-container">
+      <div class="box">
+        <img src="#" alt="HTML Icon">
+        <h3>HTML</h3>
+        <p>This box is for HTML files.</p>
+      </div>
+      <div class="box">
+        <img src="#" alt="CSS Icon">
+        <h3>CSS</h3>
+        <p>This box is for CSS files.</p>
+      </div>
+      <div class="box">
+        <img src="#" alt="JavaScript Icon">
+        <h3>JavaScript</h3>
+        <p>This is for JavaScript files.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Section -->
+  <div class="bottom-section">
+    <div class="bottom-box">
+      <h3>Demo Files for HTML</h3>
+      <p>HTML is the basic structure of a website. It uses tags like &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt;.</p>
+      <button>Read More</button>
+    </div>
+    <div class="bottom-box">
+      <h3>Demo Files for CSS</h3>
+      <p>CSS is used for styling the website — for example: color, font-size, margin, and padding.</p>
+      <button>Read More</button>
+    </div>
+    <div class="bottom-box">
+      <h3>Demo Files for JavaScript</h3>
+      <p>JavaScript makes HTML pages more dynamic and interactive.</p>
+      <button>Read More</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Terms & Conditions | Privacy Policy | Contact <br>
+    Copyright © Company 2025
+  </footer>
+
+</body>
+</html>
