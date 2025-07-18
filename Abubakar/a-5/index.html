@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 5</title>
+</head>
+
+<body>
+    <main class="container">
+        <nav class="row">
+
+            <div class="col-12">
+                <ul>
+                    <li onclick="fn_1_project()">Project 1</li>
+                    <li onclick="fn_2_project()">Project 2</li>
+                    <li onclick="fn_3_project()">Project 3</li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+        <main id="Project-1">
+            <!-- Project Name -->
+
+            <section class="container  bg-light">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">Grade Calculator</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center">Use the Buttons to calculate your grade.</p>
+                    </div>
+                </div>
+
+                <!-- Project's Buttons  -->
+
+                <div class="row">
+
+                    <button class="btn btn-primary col-2 mt-3 mb-3" onclick="input()"> Input marks for 5
+                        subjects</button>
+                    <button class="btn btn-secondary col-2 mt-3 mb-3" id="calculateTotalBtn">Calculate Total</button>
+                    <button class="btn btn-success col-2 mt-3 mb-3" id="calculateAverageBtn">Calculate Average</button>
+                    <button class="btn btn-danger col-2 mt-3 mb-3" id="checkGradeBtn">Check Grade</button>
+                    <button class="btn btn-warning col-2 mt-3 mb-3" onclick="location.reload()">Reset</button>
+                </div>
+            </section>
+
+            <!-- Project's left panal Where we can get the input and show them on table  -->
+
+            <section class="container" id="inputSection" hidden>
+                <div class="row">
+                    <div class="col-6 ">
+                        <h2 class="text-center bg-light p-3">Enter Marks Here</h2>
+                        <form action="" id="inputForm">
+                            <label for="" id="sub_label"> Enter the Subject Name here : </label> <input type="text"
+                                id="subjectInput" placeholder="You can Enter Only 5 Subjects">
+                            <div class="btn btn-info" id="addSubjectBtn">Enter</div><br><br>
+                            <label for="" id="mark_label" hidden> Enter the Marks here : </label> <input type="text"
+                                id="markInput" placeholder="Enter Marks for 5 Subjects from 0 to 100" hidden>
+                            <div class="btn btn-info" hidden id="addMarkBtn">Enter</div>
+                        </form>
+
+                        <!-- Project's Table  -->
+                        <section id="tableSection" hidden>
+
+                        </section>
+                    </div>
+
+                    <!-- Project's Right Panel where we can show the results  -->
+
+                    <div class="col-6 " hidden id="calculateResult">
+                        <div class="row mt-4 mb-4" style="border-bottom: 1px solid black;">
+                            <h3 class="text-center bg-light p-2"> Total Marks </h3>
+                            <p>Total marks he/she can get : <b><span id="totalMarks"></span></b> marks out of 500</p>
+                        </div>
+                        <div class="row mt-4 mt-4" style="border-bottom: 1px solid black;" hidden id="averageSection">
+                            <h3 class="text-center bg-light p-2"> Average Marks </h3>
+                            <p class="p-3">Average marks he/she can get : <b><span id="averageMarks"></span></b> %</p>
+                        </div>
+                        <div class="row mt-4 mb-4" style="border-bottom: 1px solid black;" hidden id="gradeSection">
+                            <h3 class="text-center bg-light p-2"> Assigned Grade </h3>
+                            <p class="p-3">Assigned grade he/she can get : <b><span id="assignedGrade"></span></b> grade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Project 2  -->
+
+
+
+        <main id="Project-2" hidden>
+
+            <section class="container  bg-light">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center mt-4">Number Guessing Game</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
+                        <p class="text-center ">Use the Buttons to Shuffle the Numbers and Guess the Correct Number</p>
+                        <i><small>
+                                <p class="text-center">Current range 0 - <span id="currentRange">10</span></p>
+                            </small></i>
+                    </div>
+                </div>
+
+                <!-- Project's Buttons  -->
+
+                <div class="row">
+                    <button class="btn btn-secondary col-2 mt-3 mb-3 p-1" id="shuffleBtn">Shuffle Numbers</button>
+                    <button class="btn btn-success col-2 mt-3 mb-3 p-1" id="changeRangeBtn">Change the range of
+                        Numbers</button>
+                </div>
+            </section>
+
+            <!-- Project's Result  -->
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-5 m-auto mt-3">
+                        <input type="text" class="form-control mt-3 mb-4" placeholder="Enter your guess here" id="guessInput"
+                            style="text-align: center;">
+                    </div>
+                </div>
+                <div class="row mt-4 mb-4">
+                    <button class="btn btn-primary col-2 p-1" id="checkGuessBtn">Check the Guess</button>
+                    <button class="btn btn-danger col-2 " id="seeCorrectNumberBtn">See the Correct Number</button>
+                </div>
+
+                <div class="row">
+                    <span m-auto class="text-center p-3" style="font-size: 1.5rem; color: green;" id="result">
+                        Result
+                    </span>
+                </div>
+            </div>
+            <div class="contain">
+                <div class="row">
+                    <br><br>
+                    <button class="btn btn-warning col-2 mt-3 mb-3 p-1 m-auto"
+                        onclick="location.reload()">Reload</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Project's 3  -->
+
+
+        <main id="Project-3" hidden>
+            <section class="container  bg-light">
+                <div class="row">
+                    <div class="col-12 mt-3 mb-3">
+                        <h1 class="text-center">Basic ATM Machine</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center">Use the Buttons to Withdraw, Deposit or Check Balance.</p>
+                    </div>
+                </div>
+
+                <!-- Project's Buttons  -->
+
+                <div class="row">
+
+                    <button class="btn btn-success col-2 mt-3 mb-3" id="checkBalanceBtn">Check Balance</button>
+                    <button class="btn btn-primary col-2 mt-3 mb-3" id="withdrawBtn"> Withdraw</button>
+                    <button class="btn btn-secondary col-2 mt-3 mb-3" id="depositBtn">Deposit</button>
+                    <button class="btn btn-danger col-2 mt-3 mb-3" id="exitBtn">Exit</button>
+                </div>
+            </section>
+
+            <!-- Project's left panal Where we can get the input and show them on table  -->
+
+            <section class="container">
+                <div class="row" >
+                    <div class="col-6 "  >
+                        <h2 class="text-center bg-light p-3">Enter Amount</h2>
+                        <form action="">
+                            <label for="" id="inputLabel">  </label> <input type="text"
+                                placeholder="-" id="Input_field"> <br><br>
+
+                        </form>
+
+                        <!-- Project's Table  -->
+
+
+                    </div>
+
+                    <!-- Project's Right Panel where we can show the results  -->
+
+                    <div class="col-6 ">
+                        <div class="row mt-4 mb-4" style="border-bottom: 1px solid black;" id="balanceSection" hidden>
+                            <h3 class="text-center bg-light p-2"> Total Balance </h3>
+                            <p>Total Balance you have : <span id="totalBalance">0</span> Rs</p>
+                        </div>
+                        <div class="row mt-4 mt-4" style="border-bottom: 1px solid black;" id="withdrawSection" hidden  >
+                            <h3 class="text-center bg-light p-2"> Total withdraw </h3>
+                            <p class="p-3">You have withdrawn this : <span id="totalWithdraw">0</span> Rs</p>
+                        </div>
+                        <div class="row mt-4 mt-4" style="border-bottom: 1px solid black;" id="depositSection" hidden >
+                            <h3 class="text-center bg-light p-2"> Total Deposit</h3>
+                            <p class="p-3">You have deposited this : <span id="totalDeposit">0</span> Rs</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </main>
+
+
+    <script src="Project1.js"></script>
+    <script src="Project2.js"></script>
+    <script src="Project3.js"></script>
+</body>
+
+</html> 
