@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <style>
+   input{height: 0.5cm; width: 1cm;}
+   h1{background-color: skyBlue; text-align: center;}
+   
+   </style>
+    <title></title>
+  </head>
+  <body>
+    <h1>Time of result</h1>
+<script>
+function check()
+{
+var a =parseInt(document.getElementById("n1").value);
+var b =parseInt(document.getElementById("n2").value);
+var c =parseInt(document.getElementById("n3").value);
+var d =parseInt(document.getElementById("n4").value);
+var e =parseInt(document.getElementById("n5").value);
+
+
+var total=a+b+c+d+e;
+var perc=(total*100/500);
+
+document.getElementById("data").innerHTML="Total Marks ="+total;
+document.getElementById("data1").innerHTML="Percrntage ="+perc+"%";
+
+
+if(perc>=60)
+       {
+document.getElementById("data2").innerHTML="Congrats! You got First position";
+
+}
+
+
+else if(perc>=45)
+       {
+document.getElementById("data2").innerHTML="Congrats! You got second position";
+
+}
+
+
+else if(perc>=33)
+       {
+document.getElementById("data2").innerHTML="Congrats! You got third position";
+}
+
+
+
+else
+       {
+document.getElementById("data2").innerHTML="Sorry! You are Fail";
+
+}
+
+}
+
+
+
+
+
+
+</script>
+<form>
+English: <input type="text" id="n1">
+Computer: <input type="text" id="n2">
+Science: <input type="text" id="n3">
+Urdu: <input type="text" id="n4">
+Maths: <input type="text" id="n5">
+<button type="button" onclick="check()"> Result Status</button>
+
+<p id="data"></p>
+<p id="data1"></p>
+<p id="data2"></p>
+
+
+</form>
+
+  </body>
+  
+</html>
+
+
+
