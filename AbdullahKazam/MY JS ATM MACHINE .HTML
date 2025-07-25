@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ATM Machine</title>
+</head>
+<body>
+
+  <h1>ATM MACHINE</h1>
+
+  Username: <input type="text" id="un"><br>
+  Password: <input type="password" id="pass" =:1357997531;><br>
+  Amount: <input type="number" id="num"><br>
+
+  <button onclick="formula()">Withdraw</button>
+
+  <h2 id="result1"></h2>
+  <h2 id="result2"></h2>
+
+  <script>
+    function formula() {
+      var u = document.getElementById("un").value;
+      var p = document.getElementById("pass").value;
+      var n = Number(document.getElementById("num").value);  // Number استعمال کیا
+
+      if (u == "admin" && p == "admin") {
+        document.getElementById("result1").innerHTML = "Welcome to ATM";
+
+        if (n > 5000) {
+          document.getElementById("result2").innerHTML = "Sorry, please try again";
+        } else {
+          document.getElementById("result2").innerHTML = "Thank you for using ATM";
+        }
+
+      } else {
+        document.getElementById("result1").innerHTML = "Username or password incorrect";
+      }
+    }
+  </script>
+
+</body>
+</html>
+  
+  
+  
+  
+  
+  
+  
